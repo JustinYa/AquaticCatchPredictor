@@ -6,7 +6,7 @@ show_downloads: true
 
 # Name of website
 title: Aquatic Catch Predictor
-logo: /media/logo.png
+logo: /media/logo.jpg
 description: Project for UCLA ECEM202A/CSM213A (Fall 2024)
 
 theme: jekyll-theme-minimal
