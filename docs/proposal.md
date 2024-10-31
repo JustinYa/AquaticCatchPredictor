@@ -13,7 +13,7 @@ Currently, most fishing prediction systems are based on empirical knowledge and 
 ---
 
 ### 3. Novelty & Rationale
-Our approach introduces several novel elements to fishing prediction. First, by using localized, real-time data, our system relies on actual data from the fishing site, such as water movement detected by an accelerometer, along with temperature, pressure, and location, to provide a comprehensive fishing index. Second, the system supports offline capability. By utilizing pre-trained machine learning models, it processes data locally, eliminating the need for cloud-based computations and enabling functionality in remote fishing locations without cellular connectivity. Additionally, for pattern recognition, the device uses decision trees or SVM (Support Vector Machines) to analyze patterns from the collected data, allowing it to dynamically identify optimal fishing conditions without requiring constant internet access. Furthermore, this system could be beneficial in competitive fishing events like Bassmaster, where it provides insights into fish activity patterns in specific water areas. By offering data-driven analyses, it has the potential to increase the event's appeal to audiences. This combination of real-time, location-specific analysis with energy-efficient, offline operation sets our device apart from conventional fishing prediction systems.
+This project introduces several novel elements to fishing prediction. First, by using localized, real-time data, the system relies on actual data from the fishing site, such as water movement detected by an accelerometer, along with temperature, pressure, and location, to provide a comprehensive fishing index. Second, the system supports offline capability. By utilizing pre-trained machine learning models, it processes data locally, eliminating the need for cloud-based computations and enabling functionality in remote fishing locations without cellular connectivity. Additionally, for pattern recognition, the device uses decision trees or SVM (Support Vector Machines) to analyze patterns from the collected data, allowing it to dynamically identify optimal fishing conditions without requiring constant internet access. Furthermore, this system could be beneficial in competitive fishing events like Bassmaster, where it provides insights into fish activity patterns in specific water areas. By offering data-driven analyses, it has the potential to increase the event's appeal to audiences. This combination of real-time, location-specific analysis with energy-efficient, offline operation sets the device apart from conventional fishing prediction systems.
 
 ---
 
@@ -23,7 +23,7 @@ The successful implementation of this project could have a significant impact on
 ---
 
 ### 5. Challenges
-This project faces several challenges. First, unlike weather forecasting, fishing prediction requires specific environmental and behavioral data for different fishing locations and times. There is no existing comprehensive database, necessitating the collection of real-world data across various conditions. Second, to ensure the data accurately represents different fishing environments, we need input from anglers of varied experience levels in multiple geographic and environmental settings. This diversity is crucial to train a model that generalizes well across conditions.
+This project faces several challenges. First, unlike weather forecasting, fishing prediction requires specific environmental and behavioral data for different fishing locations and times. There is no existing comprehensive database, necessitating the collection of real-world data across various conditions. Second, to ensure the data accurately represents different fishing environments, input is needed from anglers of varied experience levels in multiple geographic and environmental settings. This diversity is crucial to train a model that generalizes well across conditions.
 
 ---
 
@@ -40,18 +40,18 @@ The effectiveness of the fishing prediction system will be evaluated through sev
 ---
 
 ### 8. Execution Plan
-The execution plan for this project is divided into several phases. In the **Data Collection Phase**, we will gather data on temperature, pressure, water movement, and GPS location across various fishing sites. Collaborating with anglers to collect a diverse dataset is crucial to ensure the model’s generalizability and accuracy in different fishing conditions. 
+In the **Data Collection Phase**, data will be gathered on temperature, pressure, water movement, and GPS location across various fishing sites using a custom-designed Arduino measurement device. Collaborating with anglers to collect a diverse dataset is crucial to ensure the model’s generalizability and accuracy in different fishing conditions. 
 
 Following data collection, the **Model Training & Optimization** phase will involve training a machine learning model, such as decision trees or SVM, on the collected data to identify patterns in fish activity. Optimization techniques like quantization and pruning will be applied to reduce model size and power requirements, enabling efficient operation on embedded hardware. 
 
-In the **Prototype Development** phase, we will build a prototype that integrates the selected sensors, microcontroller, and power supply. Testing in real-world fishing conditions will allow us to refine the device’s sensitivity and accuracy. 
+In the **Prototype Development** phase, a prototype will be built that integrates the selected sensors, microcontroller, and power supply. Testing in real-world fishing conditions will allow for refining the device’s sensitivity and accuracy. 
 
 The **Evaluation and Refinement** phase involves multiple rounds of testing and iteration based on performance metrics, user feedback, and battery life optimization. Finally, in the **Deployment & Field Testing** phase, the finalized prototype will be field-tested with a larger user base for additional feedback and adjustments.
 
 ---
 
 ### 9. Related Work
-Though resources on freshwater fishing prediction are limited, we can draw insights from related research on ocean fishing. For example, studies such as "Fishing Spot Prediction by Sea Temperature Pattern Learning" and "An Approach to Recommend Fishing Location and Forecast Fish Production by Using Big Data Analysis and Distributed Deep Learning" provide valuable methodologies. Although these works primarily utilize data from existing databases, they offer useful experimental frameworks that can guide our approach to data collection and analysis in a freshwater context.
+Though resources on freshwater fishing prediction are limited, insights can be drawn from related research on ocean fishing. For example, studies such as "Fishing Spot Prediction by Sea Temperature Pattern Learning" and "An Approach to Recommend Fishing Location and Forecast Fish Production by Using Big Data Analysis and Distributed Deep Learning" provide valuable methodologies. Although these works primarily utilize data from existing databases, they offer useful experimental frameworks that can guide the approach to data collection and analysis in a freshwater context.
 
 ---
 
