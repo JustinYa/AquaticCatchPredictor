@@ -14,174 +14,186 @@ The AquaticCatchPredictor project utilizes Machine Learning techniques to analyz
 
 # 1. Introduction
 
+# 1. Introduction
+
 ## 1.1. Motivation & Objective
-1. **Personal Inspiration**  
-   As an avid fishing enthusiast, I encountered a frustrating experience where a fishing app predicted excellent fish activity, leading me to invite friends for a fishing trip. Unfortunately, not a single fish was caught that day. This sparked the idea for a more reliable and data-driven solution.
 
-2. **Significance**  
-   - **Who cares?**  
-     Recreational and competitive anglers aiming to improve their skills and catch rates.  
-   - **Why does it matter?**  
-     Saves time and resources, creating a more enjoyable and effective fishing experience.
+Fishing can be an enjoyable and rewarding activity, but it is not without its frustrations. One memorable experience involved using a fishing app that predicted excellent fish activity, prompting a fishing trip with friends. Unfortunately, not a single fish was caught that day, which highlighted the limitations of existing fishing prediction tools. This experience inspired the idea for a more reliable and data-driven solution. Both recreational and competitive anglers could benefit from such a system, as it would help them save time, reduce wasted effort, and improve their overall fishing success.
 
-### Objective
-
-- **Portable Device**: Create a compact system capable of predicting fish activity and recommending optimal fishing spots.
-- **Environmental Analysis**: Integrate data from temperature, pressure, and weather conditions to assess fish behavior.
-- **Real-time Insights**: Use GPS and live weather updates to identify fishing spots with the highest success potential.
-- **Enhanced Experience**: Reduce uncertainty and improve catch rates through data-driven decision-making using decision trees for prediction.
-
+The primary objective of this project is to develop a portable device that predicts fish activity and recommends optimal fishing spots. This device will integrate environmental data such as temperature, pressure, and weather conditions to analyze fish behavior effectively. Additionally, the system will provide real-time insights using GPS and live weather updates, ensuring anglers have the most accurate information. By incorporating decision tree algorithms, this solution will improve prediction accuracy, reduce uncertainty, and create a more effective fishing experience.
 
 ## 1.2. State of the Art & Its Limitations
 
+Currently available fishing apps rely heavily on general weather data and historical trends to provide predictions. While these tools offer a basic level of assistance, they have several limitations. For example, they often lack real-time data integration, which makes it challenging to adapt to changing environmental conditions. Additionally, these apps do not provide location-specific accuracy, which is crucial for anglers seeking reliable predictions for specific fishing spots. Personalized recommendations based on individual preferences or fishing goals are also absent in most existing solutions.
 
-
-
+These limitations lead to inconsistent performance, which diminishes user trust and effectiveness. This project aims to address these shortcomings by providing a data-driven, accurate, and personalized solution tailored to the unique needs of anglers.
 
 ## 1.3. Novelty & Rationale
 
-
+This project offers several unique features that set it apart from current fishing prediction tools. First, the predictions are based on scientifically collected data, ensuring high reliability and accuracy. The device also includes offline functionality, enabling it to operate independently of internet access by utilizing onboard sensors and pre-trained models. Furthermore, decision tree algorithms are employed to deliver precise predictions about fish activity, providing a significant improvement over generalized or heuristic approaches. These innovations make the system an effective tool for improving fishing outcomes in diverse conditions.
 
 ## 1.4. Potential Impact
 
-
+This fishing prediction system provides anglers with accurate, location-specific insights, improving catch rates and reducing wasted effort. For competitive anglers, it offers a strategic advantage through real-time data and decision tree algorithms. Its offline functionality enables use in remote areas, while promoting sustainable fishing by minimizing environmental impact. With strong potential for commercial applications, the system addresses key gaps in current fishing technologies and enhances the overall fishing experience.
 
 ## 1.5. Challenges
 
+Collecting a robust and comprehensive dataset for training the model within the constraints of limited time and resources is a significant challenge. To ensure the model's accuracy and generalizability, the dataset must include diverse fishing scenarios, incorporating varying skill levels of anglers, from beginners to experts. Additionally, it is essential to gather data from multiple locations within the same waterbody, covering a wide range of environmental conditions such as temperature, pressure, and water activity. These variations are critical for capturing the complex factors that influence fish behavior. Achieving this level of diversity in data collection requires extensive planning, coordination, and effort, making it one of the most demanding aspects of the project.
 
-## 1.6. Requirements for Success
+## 1.6. Required Skills and Resources
 
-The hardware required for this project is as follows:
-* 1x [XIAO ESP32S3 Sense](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html) by SEEED Studio (equipped with OV2640 camera module) 
-* 1x [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) by SEEED Studio
-* Panasonic EKMB1303111K PIR sensor
+Successfully completing this project requires a combination of skills and hardware resources:
 
-The skills required are the following:
-* Familiarity with embedded systems development, especially with sensing and power management
-* Proficiency low-level programming in C/C++
-* Understanding of machine learning, in particularly model optimization for deployment on a microcontroller (TinyML)
-* Understanding of internet protocols and web server hosting
+### Skills
+- **Sensor Integration**: Proficiency in working with sensors such as thermometers, barometers, and IMUs to collect accurate environmental data.
+- **Bluetooth Communication**: Knowledge of Bluetooth protocols to enable seamless data transfer between devices.
+- **Microcontroller Programming**: Familiarity with embedded system programming, particularly for configuring and managing microcontroller operations.
+- **PCB Design**: Experience in designing and fabricating printed circuit boards (PCBs) to integrate system components efficiently.
+- **3D Modeling**: Ability to create 3D models for designing and manufacturing the device’s enclosure, ensuring durability and ergonomic design.
+
+### Hardware Resources
+- **ESP32**: A versatile microcontroller for managing system operations and communication.
+- **Arduino Nano 33 BLE**: For low-power processing and Bluetooth communication.
+- **0.97-inch OLED Display**: For displaying real-time predictions and system status.
+- **Neo-6M GPS Module**: For obtaining accurate location data to improve fishing predictions.
 
 ## 1.7. Metrics of Success
 
-
+The success of the fishing prediction system is evaluated using a combination of accuracy, performance, and efficiency metrics. Prediction accuracy is assessed through Mean Squared Error (MSE), which calculates the average squared difference between predicted and actual values, and Root Mean Squared Error (RMSE), which provides an interpretable error measure in the same units as the target variable. To analyze model performance, Relative Error is used to measure the difference between testing and training MSE as a percentage of the training MSE, highlighting potential overfitting or underfitting. Prediction speed is another key metric, focusing on the time required for the system to compute a prediction, which is critical for real-time applications. Additionally, power efficiency is evaluated by measuring average power consumption in milliwatts (mW) and estimating battery life in hours based on the available power source. These metrics collectively ensure the system's accuracy, responsiveness, and practicality in real-world scenarios.
 
 # 2. Related Work
 
+Fishing apps are widely available on the market and are popular among anglers for their ability to predict fish activity. These apps typically gather environmental data such as temperature, barometric pressure, and wind speed through internet-based weather services. By combining this information with basic fishing heuristics—such as how weather conditions influence fish behavior—they aim to provide users with insights into the best times and locations to fish. However, the reliance on simplistic rules rather than advanced data-driven algorithms often results in limited prediction accuracy and adaptability, particularly in dynamic or less-studied fishing environments.
 
+Most of these applications are designed for use on smartphones, leveraging their convenience and portability. However, they are heavily dependent on an active internet connection to fetch real-time data. This reliance introduces a significant limitation: in remote locations where internet access is unavailable or unreliable, these apps become unusable. Such scenarios are common in rural or wilderness fishing spots, leaving anglers without reliable tools to guide their efforts.
+
+This project seeks to address these limitations by designing a fully offline solution that does not rely on internet connectivity. Instead, it integrates onboard sensors to collect local environmental data and employs advanced machine learning algorithms to provide accurate predictions. By eliminating the need for external data sources, this system ensures functionality in remote areas while offering a higher degree of reliability and precision compared to existing fishing apps. This offline capability not only enhances usability but also makes the system a more practical and versatile tool for anglers in diverse environments.
 
 # 3. Technical Approach
 
-![Circuit_Diagram](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/general%20circuit%20diagram.png)
+## 3.1. System Architecture
 
-The general circuit diagram above outlines the main components of our system. The hardware of our system is partitioned into two: PIR_XIAO circuit and PD_XIAO circuit. The PIR_XIAO circuit remains in an always-on state, whereas the PD_XIAO circuit remains in an always-off state. PIR_XIAO circuit controls the power delivery to PD_XIAO circuit using a P-MOSFET as a high-side switch based on motion events detected. PD_XIAO uses a GPIO interconnection between the two XIAOs to signal for power cutoff upon task completion.
+The system is designed with a modular architecture comprising two main components: a peripheral device and a central device. Each component has distinct responsibilities that work in tandem to collect, process, and deliver fishing predictions. The two devices communicate wirelessly via Bluetooth, ensuring efficient data transfer and seamless functionality in real-time.
 
-![PIR_XIAO](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/PIR_XIAO_loop.png)
+The **peripheral device** is built around the Arduino Nano 33 BLE, chosen for its low power consumption and integrated Bluetooth capabilities. Powered by a 500mAh LiPo battery, it is equipped with several onboard sensors to capture environmental data. These include:
+- **Water Temperature Sensor**: Measures the temperature of the water.
+- **Barometric Pressure Sensor**: Records atmospheric pressure for weather analysis.
+- **Inertial Measurement Unit (IMU)**: Detects water surface activity based on motion data.
+- **Magnetometer**: Monitors orientation to account for device positioning.
 
-PIR_XIAO subsystem functions as a state machine that controls power delivery to PD_XIAO based on the output of the PIR sensor attached via GPIO. Normally, the system remains in deep sleep with an external GPIO interrupt configured to the output of the PIR sensor. Upon detecting motion, the subsystem enables power delivery by pulling down the GPIO pin connected to the gate pin of the P-MOSFET. Next, the system immediately returns to deep sleep with an external interrupt configured to the GPIO interconnection between the two subsystems (designated PD_done signal). After the PD_XIAO subsystem completes its task, the PD_done signal will be generated through said GPIO interconnection, waking up PIR_XIAO from deep sleep. Afterwards, power delivery to PD_XIAO will be cut off, and the system will either return to deep sleep with PIR wakeup if no more motion is detected or initiate a new cycle if another motion event immediately follows.
+The peripheral device collects these data points and transmits them wirelessly to the central device, ensuring that the system can operate effectively even in remote locations.
 
-![PD_XIAO](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/PD_XIAO_loop.png)
+The **central device**, powered by an ESP32 microcontroller, is the computational hub of the system. It processes the data received from the peripheral device and generates fishing predictions using pre-trained machine learning models. The central device is equipped with:
+- A **Neo-6M GPS Module** for obtaining precise location data, critical for tailoring predictions to specific fishing spots.
+- An **OLED Display** for presenting fishing recommendations and system status to the user.
+- **Push Buttons** to allow for user interaction, such as inputting preferences or navigating the interface.
+- A **500mAh LiPo Battery**, providing sufficient power for extended use in outdoor environments.
 
-On the other hand, the workflow of the PD_XIAO subsystem is mostly sequential. Upon receiving power, the system will first perform the necessary initialization before executing the user program. To minimize system uptime, we parallelize the program by running ML model initialization and camera initialization followed by image capturing on different cores at the same time. After which, the person detection model is executed on the frame captured. Based on the inference result, the subsystem will optionally begin footage capturing, processing, and storing/transmitting when a person is detected. Lastly, the PD_done signal will be generated on the GPIO interconnection to signal for power cutoff.
+The communication between the peripheral and central devices relies on Bluetooth, ensuring fast and reliable data transfer without the need for internet connectivity. This modular design allows for flexibility and scalability, with the peripheral device specializing in data collection and the central device handling computation and user interaction. By separating these roles, the system achieves higher efficiency and adaptability, making it suitable for various fishing scenarios and environments.
 
-![prototype](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/prototype.png)
+## 3.2. Data Collection
 
-Here we showcase the prototype and the corresponding circuit diagram. Initially, we made use of a few RC circuits in order to address a few issues (outlined below in [Technical Challenge](#32-technical-challenges)), however, in our final prototype, no external RC circuit is needed. The green LED used in this prototype is for indicating PD_XIAO subsystem ON/OFF status.
+The data collection process was designed to ensure a comprehensive dataset by incorporating variations in fishing skill levels, locations, environmental conditions, and weather patterns.
 
-## 3.1. Software Framework
+### Participants
+Three participants with varying fishing expertise—beginner, intermediate, and expert—were selected to contribute to the dataset. This diversity ensures that the collected data reflects a wide range of fishing behaviors and skill levels, which is crucial for building a robust prediction model.
 
-The development environment used for this project was [ESP-IDF](https://github.com/espressif/esp-idf), a development framework provided by Espressif, the company that produced ESP32S3. The programming language used is C/C++.
+### Locations
+Data was collected simultaneously at three distinct spots within the same waterbody. Peripheral devices were connected to the nRF App on smartphones for real-time logging. These spots were chosen to capture diverse environmental conditions, enhancing the dataset’s representativeness.
 
-The person detection model used in our system is a pre-trained model provided by ESP TFLite Micro] (https://github.com/espressif/esp-tflite-micro). ESP TFLite Micro is an optimized version of Tensorflow Lite Micro specifically for ESP32 devices. Since this model is highly optimized and well suited for our specific use case, we implemented it into our code as is.
+### Process
+Each data collection session lasted 30 minutes, with participants rotating between the three locations every 10 minutes. This rotation ensured that each location included data from all three participants, thereby improving the objectivity and reliability of the dataset. Efforts were made to cover the entire lake during data collection, but certain areas, such as the North-West section, were inaccessible due to obstructions like reeds.
 
-The person detection model takes in a single 96x96 grayscale image. The OV2640 camera module on PD_XIAO has the ability to directly output images in this format. The camera module is initially configured to store its frame buffers on the internal RAM for faster access. Before capturing footage when a person is detected, the camera module is reconfigured to a higher resolution in RGB at runtime with frame buffers allocated onto the 8MB PSRAM due to increased memory usage.
+### Duration
+Data collection was conducted over six days, with three hours of collection each day. The weather conditions during these six days were carefully distributed: two days were categorized as hot, two as cold, and two as moderate. This distribution allowed the dataset to capture the influence of varying weather conditions on fish behavior. Each day yielded 18 individual data entries, resulting in a total of 108 data points for the entire experiment.
 
-The footage capturing and streaming capabilities are demonstrated in [demo video 3](https://www.youtube.com/watch?v=NmRjGxvr8ks).
+The structured process of data collection, combined with diverse participant expertise, strategically chosen locations, and a variety of weather conditions, ensures that the dataset is comprehensive, reliable, and suitable for training the fishing prediction model.
 
-## 3.2. Technical Challenges
+## 3.3. Data Processing
 
-Here we outline a selection of challenges we faced during the development of this project and the solutions we employed to address these challenges.
+The data collected during the experiment was processed to create a structured and reliable dataset for analysis and model training. Data from the nRF App was exported and consolidated into an Excel spreadsheet, including variables such as date, latitude, longitude, temperature, pressure, water activity, bite rate, and fishing spot location. The bite rate, calculated by summing the catches from all three participants at each location during a 30-minute session, served as the key target variable for the model. This approach ensured a comprehensive measure of fish activity, accounting for variations in skill levels and environmental conditions. The dataset was thoroughly reviewed for quality, with no missing values identified. However, minor GPS shifts were observed and manually adjusted to maintain accuracy. These steps ensured the dataset's readiness for machine learning applications, forming a solid foundation for reliable fishing predictions.
 
-### 3.2.1. Monochrome Camera Module Sourcing Issues
+## 3.4. Model Training
 
-In our original design, we planned on using a standalone monochrome camera module to perform person detection with the intention of reducing energy consumption by keeping the main colored camera in sleep. However, the first module we purchased was incompatible with our system, and we also faced difficulties sourcing for another module. Ultimately, we decided to capture the image for person detection on our main camera instead. The energy consumption penalty is in fact insignificant compared to the rest of the system while greatly simplifying the development process.
+The prediction model was built using a decision tree regressor implemented in Python. The input features included environmental variables such as temperature, pressure, water surface activity, and geographical location. These variables were selected for their direct impact on fish behavior and bite rates. The dataset was split into training and testing sets using an 80/20 ratio to ensure a balanced evaluation of the model’s performance. The decision tree algorithm was chosen for its interpretability and ability to handle non-linear relationships within the data. 
 
-### 3.2.2. Deep Sleep Power Consumption Over Budget
+## 3.5. Model Tuning
 
-Our original design only uses a single XIAO ESP32S3 Sense to both interface with a PIR sensor and perform person detection. However, we discovered that the deep sleep power consumption was 3.8V at 3.00mA, much higher than the 3.8V at 14μA of our expectation. This was due to the Sense board module that the camera is attached to consuming excess current at all times. We attempted to isolate all GPIO pins used by the Sense board during deep sleep, however, since its power circuitry is directly connected to the 3.3V power rail, we were unable to reduce the current consumption.
-
-Our next approach was to employ an external hardware circuitry that controls power delivery to the XIAO. We experimented with designing a custom digital circuit with microamp current consumption, which has been proven very difficult given the resources available and the timeframe. As a result, we opted to use a microcontroller for this purpose, specifically another XIAO ESP32S3. The control of power delivery is done using a P-MOSFET as a high-side switch connected to a GPIO pin. A high-side switching setup completely cuts off the access to 3.3V on the PD_XIAO subsystem, greatly reducing leakage current. The signaling mechanism for power cutoff is done using GPIO interconnection.
-
-### 3.2.3. PIR Erratic Output
-
-![PIR_output](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/PIR%20output.png)
-
-The PIR sensor used in this project has an erratic output behavior. When a single swift motion is produced within the detection range, no matter the distance from the sensor, the output will almost always contain 2-3 pulses, each lasting around 0.5-3 seconds. This behavior causes the PIR_XIAO subsystem to falsely enable power delivery multiple times in a row, which leads to unnecessary energy consumption.
-
-Our initial solution was to shorten the pulses using a small capacitor in series. When the PIR output is switched to HIGH, the capacitor will quickly charge up and disconnect the circuit, effectively shortening the pulse. However, this approach was ultimately unsuccessful because the output LOW time in between of each pulse was too long, allowing the capacitor to fully discharge in between of each pulse. In the end, there are still multiple pulses on the output, just shorter in duration.
-
-The final solution we chose was to simply include a software delay. A delay in energy-constrained microcontroller development is extremely costly. To address this, instead of having the system idle during the delay, we put the PIR_XIAO subsystem to deep sleep with a timer wakeup. This allows the subsystem to only suffer a slight penalty of a few tens of milliseconds of an extra wakeup while effectively debouncing the PIR sensor. In addition, this delay also serves as a way to limit the frequency that person detection can be performed, preventing unnecessary energy consumption if the system were to malfunction.
-
-### 3.2.4. GPIO Undefined State During Power On
-
-![rc_delay](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/RC%20delay.png)
-
-In our final setup, the PIR_XIAO subsystem controls power delivery to the PD_XIAO subsystem. A GPIO HIGH signal is initiated by PD_XIAO to signal PIR_XIAO to cut off power. However, when PD_XIAO first receives power, the GPIO pins are all in an undefined state. Through experimentation, we found that the voltage on the GPIO interconnection for PD_done signal is roughly 2.8V during initialization, above the threshold voltage for a HIGH state. This causes power to be shut off immediately after it is enabled, due to PIR_XIAO receiving a false PD_done signal. This is demonstrated on the image above: the blue signal is the output of the PD_done signal with the initial peak generated during initialization and the second peak being the true PD_done signal.
-
-We have attempted to initialize this GPIO pin on PD_XIAO as early as possible in the bootup sequence to no avail. As a first solution, we introduced an RC delay circuit that ensures that the voltage on the line will not rise above the HIGH threshold during initialization. However, this has induced a heavy latency penalty to power shut off due to the nature of an RC delay circuit. Our final solution was to implement a software delay in the PIR_XIAO code that blocks the PD_done signal for a sufficient amount of time after first enabling power delivery. Since the PD_XIAO subsystem consumes current in the magnitude of hundreds of milliamps, keeping PIR_XIAO in idle briefly during this has minimal energy consumption penalty. 
+During initial training, the decision tree model exhibited signs of overfitting, with the training Mean Squared Error (MSE) being significantly lower than the testing MSE. To address this issue, parameters such as the maximum depth of the tree and the minimum number of samples required at a leaf node were introduced to constrain the model's complexity. The best performance was achieved with a maximum depth of 4 and a minimum of 4 samples per leaf, which balanced the trade-off between accuracy and generalization. This tuning step ensured that the model could make reliable predictions without overfitting to the training data.
 
 # 4. Evaluation and Results
 
-The primary goal of the project was to achieve a multimodal intrusion detection system in the ultra low power regime (sub 1 mW regime).
+## 4.1. Results
 
-As mentioned previously, the state of the art vision-only custom-ASIC approach has a total system power consumption of 170µW, which is equivalent to 14688mJ/day [1]. Initially, we decided that the metric of successful this project would be to achieve a total energy consumption within this budget while achieving 50 wakeups/day.
+The performance of the fishing prediction system was evaluated across multiple dimensions, including prediction accuracy, processing speed, and power efficiency. These evaluations reflect the system’s suitability for real-world fishing applications and its ability to operate under various constraints.
 
-We partition our system to two behavioral states: a passive deep sleep state and an active ON-state. The current consumption is measured using a Keithley 2601A source meter.
+### Prediction Accuracy
+The decision tree model demonstrated reliable predictive performance, achieving the following metrics:
+- **Testing MSE**: 0.2498  
+- **Training MSE**: 0.2751  
+- **Testing RMSE**: 0.4998  
+- **Training RMSE**: 0.5245  
+- **Relative Error**: 10.12% (difference between Training MSE and Testing MSE)
 
-In the deep sleep state, only the PIR_XIAO subsystem remains active, consuming a current of 18µA in total at 3.3V, out of which, 12µA is consumed by the PIR_XIAO in deep sleep, 6µA is consumed by the PIR sensor in idle state. In total, this sums up to 5132mJ of energy per day that has to be allocated to the passive deep sleep state.
+The small difference between training and testing MSE indicates that the model has effectively avoided overfitting, maintaining good generalization across unseen data. The RMSE values further provide an interpretable measure of error in the same units as the target variable, confirming the model's accuracy for predicting fish bite rates.
 
-![energy_disttribution](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/energy%20distribution.png)
+### Processing Speed
+The system achieved an average prediction speed of **15 ms** per query, enabling near-instantaneous feedback for users in real-time fishing scenarios. This rapid response ensures that anglers can make timely decisions based on current environmental conditions.
 
-The active ON-state current consumption is graphed below. By taking an average of the current consumption across the duration of a wakeup event, we were able to estimate the energy consumption of each wakeup event to be 395mJ.
+### Power Efficiency
+The power efficiency of the system was analyzed for both the central and peripheral devices:
 
-For an aforementioned 14688mJ of power budget, we are able to achieve 24 wakeups per day. Note that the energy consumption calculation for active ON-state does not include footage capturing or any related processing and transmission, as the energy optimization of these areas is out of the scope of this project.
+#### Central Device
+- **Average Power Consumption**: 408.6 mW  
+- **Battery Life**: Approximately 4.77 hours on a 500mAh battery  
+- **Memory Usage**: 90%
 
-The following graph showcases the current consumption of 3 consecutive wakeup events. Each wakeup event contains a main peak (shown in magenta) and a subsequent peak (shown in red). The main peak contains the main person detection tasks, whereas the subsequent peak corresponds to a brief wakeup event of the PIR_XIAO after debouncing the PIR sensor using a timer wakeup.
+The central device’s higher power consumption is attributed to its computational workload, which includes processing data, running machine learning models, and managing the user interface. Despite this, the device maintains sufficient battery life for typical fishing trips.
 
-![energy_disttribution](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/current%20consumption%20-%203%20peaks.png)
+#### Peripheral Device
+- **Average Power Consumption**: 70.2 mW  
+- **Battery Life**: Approximately 27.76 hours on a 500mAh battery  
+- **Memory Usage**: 23%
 
-The main peak is partitioned into individual phases. The regions of operation are indicated in the graph below. Note that the person detection neural network consumes almost the most amount of current, but only takes 58ms to execute. The circuit delay portion also consumes significant current, but it takes 381ms to execute. As previously mentioned in [Section 3.2.4](#324-gpio-undefined-state-during-power-on), we have removed the RC circuit in our final prototype, hence the current consumption induced by the circuit delay is no longer relevant. This has also been demonstrated in the [second demo video](https://youtube.com/shorts/ZmwHzCMsa_o?feature=share).
+The peripheral device’s low power consumption and memory usage highlight its role as a dedicated data collection unit, with an extended battery life that ensures uninterrupted operation during long fishing sessions. Combined with the central device’s efficient power management and high computational capability, the results demonstrate a well-balanced system that excels in prediction accuracy, responsiveness, and energy efficiency. The low relative error confirms the reliability and generalization of the model, while the fast prediction speed makes it practical for real-time use. These features collectively ensure prolonged usability in outdoor environments, even under limited power availability, making the system a robust and effective tool for enhancing the fishing experience for both recreational and professional anglers.
 
-With the RC circuit removed, the active ON-state current consumption per wakeup cycle is reduced to 225mJ/wakeup, which allows for a 42 wakeups/day.
+## 4.2. Findings
 
-![main_peak](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/main%20peak.png)
-![energy_energy_per_region](https://raw.githubusercontent.com/AnanayG/multimodal_intrusion_detection/main/docs/media/duration%2Benergy%20of%20each%20region.png)
+A user study involving five participants provided valuable insights into how the fishing prediction system was used by different groups and its effectiveness under real-world conditions. 
+
+### Beginners 
+Beginners exhibited a high level of dependence on the system, using it more frequently to guide their fishing efforts. They primarily relied on the system's location recommendations to identify optimal fishing spots, particularly when navigating unfamiliar environments. Despite this reliance, their actual catch rates were generally lower than the system's predictions. This discrepancy can be attributed to two main factors: the participants' lack of fishing experience and the limitations of the training dataset. During data collection, the dataset did not include data from individuals with no fishing experience, leading to a slight mismatch between the model's predictions and the performance of completely inexperienced users. For this group, the system acted as a critical tool to improve their understanding of fishing conditions and strategies, even if their results initially fell short of predictions. 
+
+To address this limitation in the future, a potential improvement could involve adding a **rating functionality** to the system. Users could self-assess and input their fishing skill level, allowing the system to appropriately scale its predictions based on their experience. This feature would enable more personalized and accurate recommendations for users of all skill levels.
+
+### Intermediate and Advanced Users
+Intermediate and advanced users demonstrated a different usage pattern, interacting with the system less frequently compared to beginners. These participants showed a high alignment between their actual catch rates and the system's predictions, reflecting their ability to effectively combine personal experience with system insights. For this group, the fish activity predictions were particularly valuable, as they used the system to refine their fishing strategies rather than as a primary guide. The system served as a supplementary tool to enhance their fishing efficiency and decision-making.
+
+The study highlighted the system's ability to cater to a wide range of users. Beginners benefited most from the location recommendations, using the system to gain confidence and improve their results. In contrast, more experienced anglers used the system to enhance their existing skills, demonstrating its adaptability and effectiveness across skill levels. These findings underscore the system’s potential as both a learning aid and a strategic tool for diverse fishing scenarios, with opportunities for future enhancements such as skill-based scaling to improve its accuracy and usability.
 
 # 5. Discussion and Conclusions
 
-In the end, we achieved 42 wakeups/day at 170µW power consumption. Even though we were not able to achieve 50 wakeups/day as we previously planned for, we are close enough to the target to demonstrate the effectiveness of our design. In addition, our project is done only using off-the-shelf components; the fact that we are able to compete with a custom ASIC design clearly demonstrates the superiority of our multimodal approach to person detection compared to the traditional vision-only approach.
+## Discussion
 
-In the TinyML community, 1mW is considered a significant milestone in terms of power consumption. After achieving this threshold, the system can easily last “forever” with the help of minimal energy harvesting. For a power budget of 1mW, our system can achieve around 247 wakeups/day, which is more than sufficient for the typical security application. With the help of a small solar panel, our security camera prototype will be able to provide a maintenance-free user experience.
+### Hardware Improvements
+The system’s hardware components are functional but present opportunities for improvement. Replacing the current GPS module with an Adafruit GPS module could lower power consumption and support low-power modes, extending battery life for prolonged use. Additionally, optimizing the device enclosure to make it more compact and portable would enhance user convenience, especially for outdoor activities.
 
-In conclusion, we consider our project a success despite not strictly meeting the goal we first set out to reach. Since many significant challenges we faced during the project were fundamentally due to the limitations of off-the-shelf components, if we were to use custom hardware similar to that in state-of-the-art implementations today, such as implementing PIR_XIAO subsystem with an FPGA, we will undoubtedly achieve an even more impressive power consumption.
+### Data Collection
+Expanding the scope of data collection to include more sessions and diverse water bodies would significantly improve the model's accuracy and generalizability. Incorporating data from a wider range of environmental conditions and user experiences, including completely inexperienced anglers, could help address current limitations and refine the system’s predictions.
+
+### Future Features
+Future iterations of the system could include additional measurements such as water depth and dissolved oxygen to improve prediction accuracy. Furthermore, integrating a user rating feature would allow individuals to specify their skill level. This feature would enable the system to scale predictions accordingly, providing personalized recommendations tailored to each user’s expertise.
+
+## Conclusions
+The fishing prediction system successfully helps both beginners and experienced anglers by providing actionable fishing predictions. Beginners benefit most from location recommendations, frequently using the system as a guide to navigate unfamiliar conditions. Experienced users rely more on fish activity predictions to refine their strategies, using the system as a supplementary tool. 
+
+The decision tree model performs well, achieving low testing errors and accurate predictions under diverse conditions. The system’s real-time prediction capability and low power consumption make it a reliable choice for extended fishing trips. User feedback underscores the system’s value, with 80% of participants expressing a willingness to recommend it to others.
+
+Overall, the system demonstrates its potential to enhance the fishing experience for a wide range of users, while the proposed improvements and features highlight opportunities to further increase its effectiveness and user satisfaction.
 
 # 6. Demo Links
 
-* [Master Demo Video](https://www.youtube.com/watch?si=UEJS8G_MfGbzbT3T&v=8JuSE7JUu0g&feature=youtu.be)
-* [No RC Circuit Demo Video](https://youtube.com/shorts/ZmwHzCMsa_o?feature=share)
-* [Wifi Streaming Demo Video](https://www.youtube.com/watch?v=NmRjGxvr8ks)
-* [System power data](https://docs.google.com/spreadsheets/d/1SeqJhA1LRMm0-gP1tuYFk-gqm2a6v0A1QVVGwjIOnUg/edit?usp=sharing)
-* [Final Presentation Link](https://docs.google.com/presentation/d/1U2bdHlef-A1cob_oj03bhjhw77Q7Prq9A0cpEgVMt5c/edit?usp=sharing)
-  
-# 7. References
+* [Prediction Mode Demo Video](https://drive.google.com/file/d/1JTeIy1hggbkSafa4Nath8DWK5p9Q1THv/view?usp=sharing)
+* [Location Suggestion & Navigation Modes Demo Video](https://drive.google.com/file/d/1JZ9xc8-V4VDqHVV1dyS5ZUOEnqnyqMGk/view?usp=sharing)
 
-* An, H. et al. (2021) ‘An ultra-low-power image signal processor for hierarchical image recognition with deep neural networks’, IEEE Journal of Solid-State Circuits, 56(4), pp. 1071–1081. doi:10.1109/jssc.2020.3041858.
-* Chowdhery, A. et al. (2019) Visual wake words dataset, arXiv.org. Available at: https://arxiv.org/abs/1906.05721 (Accessed: 11 November 2023).
-* [ESP TFLite Micro GitHub Repository](https://github.com/espressif/esp-tflite-micro)
-* [ESP32S3 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
-* [ESP32S3 Technical Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)
-* [ESP-IDF GitHub Repository](https://github.com/espressif/esp-idf)
-* [SEEED Studio XIAO ESP32S3 Wiki](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
-* [Panasonic PIR Sensor Datasheet](https://api.pim.na.industrial.panasonic.com/file_stream/main/fileversion/251032)
-* [ESP32-CAM Person Detection Experiment With TensorFlow Lite](https://www.instructables.com/ESP32-CAM-Person-Detection-Expreiment-With-TensorF/)
-* [TinyML Talks - Yung-Hsiang Lu: Low-Power Computer Vision](https://www.youtube.com/watch?v=GdAs4P_0wEk&t=137s&ab_channel=tinyML)
+# 7. References
