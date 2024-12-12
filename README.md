@@ -7,7 +7,8 @@ The AquaticCatchPredictor project utilizes Machine Learning techniques to analyz
 
 The folders contain the following:
 
-doc/ for website content
-software/ for code used in this project
-hardware/ for 3d modeling and PCB design used in this project
-data/ for data data used in this project
+- **doc/**: For website content
+- **software/**: For code used in this project
+- **hardware/**: For 3D modeling and PCB design used in this project
+- **data/**: For data used in this project
+
