@@ -15,7 +15,21 @@ The AquaticCatchPredictor project utilizes Machine Learning techniques to analyz
 # 1. Introduction
 
 ## 1.1. Motivation & Objective
+1. **Personal Inspiration**  
+   As an avid fishing enthusiast, I encountered a frustrating experience where a fishing app predicted excellent fish activity, leading me to invite friends for a fishing trip. Unfortunately, not a single fish was caught that day. This sparked the idea for a more reliable and data-driven solution.
 
+2. **Significance**  
+   - **Who cares?**  
+     Recreational and competitive anglers aiming to improve their skills and catch rates.  
+   - **Why does it matter?**  
+     Saves time and resources, creating a more enjoyable and effective fishing experience.
+
+### Objective
+
+- **Portable Device**: Create a compact system capable of predicting fish activity and recommending optimal fishing spots.
+- **Environmental Analysis**: Integrate data from temperature, pressure, and weather conditions to assess fish behavior.
+- **Real-time Insights**: Use GPS and live weather updates to identify fishing spots with the highest success potential.
+- **Enhanced Experience**: Reduce uncertainty and improve catch rates through data-driven decision-making using decision trees for prediction.
 
 
 ## 1.2. State of the Art & Its Limitations
