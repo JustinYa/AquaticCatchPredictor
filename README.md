@@ -9,8 +9,8 @@ The AquaticCatchPredictor project utilizes Machine Learning techniques to analyz
 
 # Required Submissions  
 
-* [Propopsal](proposal.md)
-* [Midterm Checkpoint Presentation Slides](midtermPresentation.pdf)
+* [Propopsal](https://justinya.github.io/AquaticCatchPredictor/proposal.html)
+* [Midterm Checkpoint Presentation Slides](https://justinya.github.io/AquaticCatchPredictor/midtermPresentation.pdf)
 * [Final Presentation Slides]()
 * [Final Report](report.md)
 * [Demo Video]()
