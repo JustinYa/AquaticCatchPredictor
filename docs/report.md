@@ -83,7 +83,7 @@ The **peripheral device** is built around the Arduino Nano 33 BLE, chosen for it
 - **Inertial Measurement Unit (IMU)**: Detects water surface activity based on motion data.
 - **Magnetometer**: Monitors orientation to account for device positioning.
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/peripheral.jpg" alt="Peripheral Device" width="600">
+<img src="./media/peripheral.jpg" alt="Peripheral Device" width="600">
 
 The peripheral device collects these data points and transmits them wirelessly to the central device, ensuring that the system can operate effectively even in remote locations.
 
@@ -93,7 +93,7 @@ The **central device**, powered by an ESP32 microcontroller, is the computationa
 - **Push Buttons** to allow for user interaction, such as inputting preferences or navigating the interface.
 - A **500mAh LiPo Battery**, providing sufficient power for extended use in outdoor environments.
 
- <img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/central.jpg" alt="Central Device" width="600">
+ <img src=".media/central.jpg" alt="Central Device" width="600">
 
 The communication between the peripheral and central devices relies on Bluetooth, ensuring fast and reliable data transfer without the need for internet connectivity. This modular design allows for flexibility and scalability, with the peripheral device specializing in data collection and the central device handling computation and user interaction. By separating these roles, the system achieves higher efficiency and adaptability, making it suitable for various fishing scenarios and environments.
 
@@ -107,7 +107,7 @@ Three participants with varying fishing expertise—beginner, intermediate, and 
 ### Locations
 Data was collected simultaneously at three distinct spots within the same waterbody. Peripheral devices were connected to the nRF App on smartphones for real-time logging. These spots were chosen to capture diverse environmental conditions, enhancing the dataset’s representativeness.
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/Collected_spots.png" alt="Collected Spots" width="500">
+<img src=".media/Collected_spots.png" alt="Collected Spots" width="500">
 
 ### Process
 Each data collection session lasted 30 minutes, with participants rotating between the three locations every 10 minutes. This rotation ensured that each location included data from all three participants, thereby improving the objectivity and reliability of the dataset. Efforts were made to cover the entire lake during data collection, but certain areas, such as the North-West section, were inaccessible due to obstructions like reeds.
