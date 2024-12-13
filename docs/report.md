@@ -100,6 +100,7 @@ Three participants with varying fishing expertise—beginner, intermediate, and 
 
 ### Locations
 Data was collected simultaneously at three distinct spots within the same waterbody. Peripheral devices were connected to the nRF App on smartphones for real-time logging. These spots were chosen to capture diverse environmental conditions, enhancing the dataset’s representativeness.
+
 <img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/Collected_spots.png" alt="Collected Spots" width="500">
 
 ### Process
