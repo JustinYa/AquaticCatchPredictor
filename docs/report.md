@@ -197,6 +197,10 @@ Overall, the system demonstrates its potential to enhance the fishing experience
 * [Location Suggestion & Navigation Modes Demo Video](https://drive.google.com/file/d/1JZ9xc8-V4VDqHVV1dyS5ZUOEnqnyqMGk/view?usp=sharing)
 
 # 7. References
-[1] M. Iiyama, K. Zhao, A. Hashimoto, H. Kasahara, and M. Minoh, “Fishing spot prediction by sea temperature pattern learning,” 2018 OCEANS - MTS/IEEE Kobe Techno-Oceans (OTO), pp. 1–4, May 2018. doi:10.1109/oceanskobe.2018.8559299 
-[2] M.-T. Thai, T.-N. Chu-Ha, T.-A. Vo, and T.-H. Do, “An approach to recommend fishing location and forecast fish production by using Big Data Analysis and distributed deep learning,” 2022 RIVF International Conference on Computing and Communication Technologies (RIVF), pp. 322–327, Dec. 2022. doi:10.1109/rivf55975.2022.10013876 
-[3] Gauravduttakiit, “Hyperparameter tuning in decision trees,” Kaggle, https://www.kaggle.com/code/gauravduttakiit/hyperparameter-tuning-in-decision-trees (accessed Dec. 12, 2024). 
+
+1. M. Iiyama, K. Zhao, A. Hashimoto, H. Kasahara, and M. Minoh, “Fishing spot prediction by sea temperature pattern learning,” *2018 OCEANS - MTS/IEEE Kobe Techno-Oceans (OTO)*, pp. 1–4, May 2018. doi: [10.1109/oceanskobe.2018.8559299](https://doi.org/10.1109/oceanskobe.2018.8559299)
+
+2. M.-T. Thai, T.-N. Chu-Ha, T.-A. Vo, and T.-H. Do, “An approach to recommend fishing location and forecast fish production by using Big Data Analysis and distributed deep learning,” *2022 RIVF International Conference on Computing and Communication Technologies (RIVF)*, pp. 322–327, Dec. 2022. doi: [10.1109/rivf55975.2022.10013876](https://doi.org/10.1109/rivf55975.2022.10013876)
+
+3. Gauravduttakiit, “Hyperparameter tuning in decision trees,” *Kaggle*, [https://www.kaggle.com/code/gauravduttakiit/hyperparameter-tuning-in-decision-trees](https://www.kaggle.com/code/gauravduttakiit/hyperparameter-tuning-in-decision-trees) (accessed Dec. 12, 2024).
+
