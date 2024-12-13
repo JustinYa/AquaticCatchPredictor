@@ -179,6 +179,8 @@ The peripheral device’s low power consumption and memory usage highlight its r
 
 A user study involving five participants provided valuable insights into how the fishing prediction system was used by different groups and its effectiveness under real-world conditions. 
 
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/User%20Recommendation%20Rate.png" alt="System Architecture" width="600">
+
 ### Beginners 
 Beginners exhibited a high level of dependence on the system, using it more frequently to guide their fishing efforts. They primarily relied on the system's location recommendations to identify optimal fishing spots, particularly when navigating unfamiliar environments. Despite this reliance, their actual catch rates were generally lower than the system's predictions. This discrepancy can be attributed to two main factors: the participants' lack of fishing experience and the limitations of the training dataset. During data collection, the dataset did not include data from individuals with no fishing experience, leading to a slight mismatch between the model's predictions and the performance of completely inexperienced users. For this group, the system acted as a critical tool to improve their understanding of fishing conditions and strategies, even if their results initially fell short of predictions. 
 
@@ -206,8 +208,6 @@ Future iterations of the system could include additional measurements such as wa
 The fishing prediction system successfully helps both beginners and experienced anglers by providing actionable fishing predictions. Beginners benefit most from location recommendations, frequently using the system as a guide to navigate unfamiliar conditions. Experienced users rely more on fish activity predictions to refine their strategies, using the system as a supplementary tool. 
 
 The decision tree model performs well, achieving low testing errors and accurate predictions under diverse conditions. The system’s real-time prediction capability and low power consumption make it a reliable choice for extended fishing trips. User feedback underscores the system’s value, with 80% of participants expressing a willingness to recommend it to others.
-
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/User%20Recommendation%20Rate.png" alt="System Architecture" width="600">
 
 Overall, the system demonstrates its potential to enhance the fishing experience for a wide range of users, while the proposed improvements and features highlight opportunities to further increase its effectiveness and user satisfaction.
 
