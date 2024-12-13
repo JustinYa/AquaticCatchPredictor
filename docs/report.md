@@ -83,6 +83,8 @@ The **peripheral device** is built around the Arduino Nano 33 BLE, chosen for it
 - **Inertial Measurement Unit (IMU)**: Detects water surface activity based on motion data.
 - **Magnetometer**: Monitors orientation to account for device positioning.
 
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/peripheral.jpg" alt="System Architecture" width="600">
+
 The peripheral device collects these data points and transmits them wirelessly to the central device, ensuring that the system can operate effectively even in remote locations.
 
 The **central device**, powered by an ESP32 microcontroller, is the computational hub of the system. It processes the data received from the peripheral device and generates fishing predictions using pre-trained machine learning models. The central device is equipped with:
@@ -90,6 +92,8 @@ The **central device**, powered by an ESP32 microcontroller, is the computationa
 - An **OLED Display** for presenting fishing recommendations and system status to the user.
 - **Push Buttons** to allow for user interaction, such as inputting preferences or navigating the interface.
 - A **500mAh LiPo Battery**, providing sufficient power for extended use in outdoor environments.
+
+ <img src="[https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/peripheral.jpg](https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/central.jpg)" alt="System Architecture" width="600">
 
 The communication between the peripheral and central devices relies on Bluetooth, ensuring fast and reliable data transfer without the need for internet connectivity. This modular design allows for flexibility and scalability, with the peripheral device specializing in data collection and the central device handling computation and user interaction. By separating these roles, the system achieves higher efficiency and adaptability, making it suitable for various fishing scenarios and environments.
 
