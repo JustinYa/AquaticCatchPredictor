@@ -75,7 +75,7 @@ This project seeks to address these limitations by designing a fully offline sol
 
 The system is designed with a modular architecture comprising two main components: a peripheral device and a central device. Each component has distinct responsibilities that work in tandem to collect, process, and deliver fishing predictions. The two devices communicate wirelessly via Bluetooth, ensuring efficient data transfer and seamless functionality in real-time.
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/System%20Architecture.png" alt="System Architecture" width="600">
+<img src="media/System%20Architecture.png" alt="System Architecture" width="600">
 
 The **peripheral device** is built around the Arduino Nano 33 BLE, chosen for its low power consumption and integrated Bluetooth capabilities. Powered by a 500mAh LiPo battery, it is equipped with several onboard sensors to capture environmental data. These include:
 - **Water Temperature Sensor**: Measures the temperature of the water.
