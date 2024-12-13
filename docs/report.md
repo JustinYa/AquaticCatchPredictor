@@ -83,7 +83,7 @@ The **peripheral device** is built around the Arduino Nano 33 BLE, chosen for it
 - **Inertial Measurement Unit (IMU)**: Detects water surface activity based on motion data.
 - **Magnetometer**: Monitors orientation to account for device positioning.
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/peripheral.jpg" alt="System Architecture" width="600">
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/peripheral.jpg" alt="Peripheral Device" width="600">
 
 The peripheral device collects these data points and transmits them wirelessly to the central device, ensuring that the system can operate effectively even in remote locations.
 
@@ -93,7 +93,7 @@ The **central device**, powered by an ESP32 microcontroller, is the computationa
 - **Push Buttons** to allow for user interaction, such as inputting preferences or navigating the interface.
 - A **500mAh LiPo Battery**, providing sufficient power for extended use in outdoor environments.
 
- <img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/central.jpg" alt="System Architecture" width="600">
+ <img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/central.jpg" alt="Central Device" width="600">
 
 The communication between the peripheral and central devices relies on Bluetooth, ensuring fast and reliable data transfer without the need for internet connectivity. This modular design allows for flexibility and scalability, with the peripheral device specializing in data collection and the central device handling computation and user interaction. By separating these roles, the system achieves higher efficiency and adaptability, making it suitable for various fishing scenarios and environments.
 
@@ -123,7 +123,7 @@ The data collected during the experiment was processed to create a structured an
 
 ## 3.4. Model Training
 
-![Decision Tree](https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/decision_tree_regressor.png)
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/decision_tree_regressor.png" alt="Decision Tree">
 
 The prediction model was built using a decision tree regressor implemented in Python. The input features included environmental variables such as temperature, pressure, water surface activity, and geographical location. These variables were selected for their direct impact on fish behavior and bite rates. The dataset was split into training and testing sets using an 80/20 ratio to ensure a balanced evaluation of the model’s performance. The decision tree algorithm was chosen for its interpretability and ability to handle non-linear relationships within the data. 
 
@@ -145,7 +145,7 @@ The decision tree model demonstrated reliable predictive performance, achieving 
 - **Training RMSE**: 0.5245  
 - **Relative Error**: 10.12% (difference between Training MSE and Testing MSE)
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/model_accuracy_results.png" alt="System Architecture" width="600">
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/model_accuracy_results.png" alt="Model Accuracy Results" width="600">
 
 The small difference between training and testing MSE indicates that the model has effectively avoided overfitting, maintaining good generalization across unseen data. The RMSE values further provide an interpretable measure of error in the same units as the target variable, confirming the model's accuracy for predicting fish bite rates.
 
@@ -153,7 +153,7 @@ The small difference between training and testing MSE indicates that the model h
 
 The feature importance analysis reveals that **Temperature** is the most significant factor, with an importance score of **0.56**, indicating its dominant role in the model's predictions. Other features like **Latitude** (**0.19**), **Pressure** (**0.13**), and **Water Activity** (**0.12**) also contribute meaningfully, while **Longitude** (**0.00**) has no observable impact. These results suggest that the model is primarily driven by temperature variations, with secondary influences from location and pressure metrics.
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/feature_importances.png" alt="System Architecture" width="600">
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/feature_importances.png" alt="Feature Importances" width="600">
 
 ### Processing Speed
 The system achieved an average prediction speed of **15 ms** per query, enabling near-instantaneous feedback for users in real-time fishing scenarios. This rapid response ensures that anglers can make timely decisions based on current environmental conditions.
@@ -179,7 +179,7 @@ The peripheral device’s low power consumption and memory usage highlight its r
 
 A user study involving five participants provided valuable insights into how the fishing prediction system was used by different groups and its effectiveness under real-world conditions. 
 
-<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/User%20Recommendation%20Rate.png" alt="System Architecture" width="600">
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/User%20Recommendation%20Rate.png" alt="User Recommendation Feedback" width="600">
 
 ### Beginners 
 Beginners exhibited a high level of dependence on the system, using it more frequently to guide their fishing efforts. They primarily relied on the system's location recommendations to identify optimal fishing spots, particularly when navigating unfamiliar environments. Despite this reliance, their actual catch rates were generally lower than the system's predictions. This discrepancy can be attributed to two main factors: the participants' lack of fishing experience and the limitations of the training dataset. During data collection, the dataset did not include data from individuals with no fishing experience, leading to a slight mismatch between the model's predictions and the performance of completely inexperienced users. For this group, the system acted as a critical tool to improve their understanding of fishing conditions and strategies, even if their results initially fell short of predictions. 
