@@ -1,6 +1,6 @@
 # Abstract
 
-The AquaticCatchPredictor project utilizes Machine Learning techniques to analyze fishing data, including GPS location, temperature, air pressure, and water activity. By collecting real-time environmental data, the system predicts catch rates under current fishing conditions and provides on-site recommendations to enhance fishing success. This approach aims to assist anglers in making informed decisions based on environmental factors, thereby improving their catch rates. The integration of machine learning ensures that predictions adapt to varying conditions, making the AquaticCatchPredictor a valuable tool for recreational and professional fishing alike.
+AquaticCatchPredictor is a predictive system designed to enhance fishing efficiency by leveraging environmental data and machine learning. It analyzes key factors such as temperature, pressure, water activity, and geographic location to determine the best fishing spots and predict fish activity. The system integrates real-time weather data and decision tree models to provide actionable insights, helping anglers make informed decisions. Its user-centric design focuses on accuracy, usability, and adaptability to diverse aquatic environments.
 
 # Team
 
