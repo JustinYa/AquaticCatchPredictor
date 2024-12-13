@@ -11,6 +11,6 @@ The AquaticCatchPredictor project utilizes Machine Learning techniques to analyz
 
 * [Propopsal](proposal.md)
 * [Midterm Checkpoint Presentation Slides](midtermPresentation.pdf)
-* [Final Presentation Slides]()
+* [Final Presentation Slides](https://docs.google.com/presentation/d/1H-CBQTqb1kGFo9P-xzhdKyaAK2egp4QP/edit?usp=sharing&ouid=104125736222199784134&rtpof=true&sd=true)
 * [Final Report](report.md)
 * [Demo Video]()
