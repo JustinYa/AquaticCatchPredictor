@@ -207,6 +207,8 @@ The fishing prediction system successfully helps both beginners and experienced 
 
 The decision tree model performs well, achieving low testing errors and accurate predictions under diverse conditions. The system’s real-time prediction capability and low power consumption make it a reliable choice for extended fishing trips. User feedback underscores the system’s value, with 80% of participants expressing a willingness to recommend it to others.
 
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/User%20Recommendation%20Rate.png" alt="System Architecture" width="600">
+
 Overall, the system demonstrates its potential to enhance the fishing experience for a wide range of users, while the proposed improvements and features highlight opportunities to further increase its effectiveness and user satisfaction.
 
 # 6. Demo Links
