@@ -13,3 +13,8 @@ AquaticCatchPredictor is a predictive system designed to enhance fishing efficie
 * [Final Report](https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/report.md)
 * [Prediction Mode Demo Video](https://drive.google.com/file/d/1JTeIy1hggbkSafa4Nath8DWK5p9Q1THv/view?usp=sharing)
 * [Location Suggestion & Navigation Modes Demo Video](https://drive.google.com/file/d/1JZ9xc8-V4VDqHVV1dyS5ZUOEnqnyqMGk/view?usp=sharing)
+
+data/ data data used in this project
+doc/ website content
+software/ code used in this project
+hardware/ physical hardware used in this project
