@@ -93,7 +93,7 @@ The **central device**, powered by an ESP32 microcontroller, is the computationa
 - **Push Buttons** to allow for user interaction, such as inputting preferences or navigating the interface.
 - A **500mAh LiPo Battery**, providing sufficient power for extended use in outdoor environments.
 
- <img src="[https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/peripheral.jpg](https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/central.jpg)" alt="System Architecture" width="600">
+ <img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/central.jpg" alt="System Architecture" width="600">
 
 The communication between the peripheral and central devices relies on Bluetooth, ensuring fast and reliable data transfer without the need for internet connectivity. This modular design allows for flexibility and scalability, with the peripheral device specializing in data collection and the central device handling computation and user interaction. By separating these roles, the system achieves higher efficiency and adaptability, making it suitable for various fishing scenarios and environments.
 
