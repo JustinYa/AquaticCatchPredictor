@@ -115,7 +115,7 @@ The data collected during the experiment was processed to create a structured an
 
 ## 3.4. Model Training
 
-[Decision Tree](docs/media/decision_tree_regressor.png)
+![Decision Tree](docs/media/decision_tree_regressor.png)
 
 The prediction model was built using a decision tree regressor implemented in Python. The input features included environmental variables such as temperature, pressure, water surface activity, and geographical location. These variables were selected for their direct impact on fish behavior and bite rates. The dataset was split into training and testing sets using an 80/20 ratio to ensure a balanced evaluation of the model’s performance. The decision tree algorithm was chosen for its interpretability and ability to handle non-linear relationships within the data. 
 
