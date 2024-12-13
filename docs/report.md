@@ -99,6 +99,7 @@ The data collection process was designed to ensure a comprehensive dataset by in
 Three participants with varying fishing expertise—beginner, intermediate, and expert—were selected to contribute to the dataset. This diversity ensures that the collected data reflects a wide range of fishing behaviors and skill levels, which is crucial for building a robust prediction model.
 
 ### Locations
+![Collected Spots](https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/Collected_spots.png)
 Data was collected simultaneously at three distinct spots within the same waterbody. Peripheral devices were connected to the nRF App on smartphones for real-time logging. These spots were chosen to capture diverse environmental conditions, enhancing the dataset’s representativeness.
 
 ### Process
