@@ -145,13 +145,15 @@ The decision tree model demonstrated reliable predictive performance, achieving 
 - **Training RMSE**: 0.5245  
 - **Relative Error**: 10.12% (difference between Training MSE and Testing MSE)
 
+<img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/model_accuracy_results.png" alt="System Architecture" width="600">
+
+The small difference between training and testing MSE indicates that the model has effectively avoided overfitting, maintaining good generalization across unseen data. The RMSE values further provide an interpretable measure of error in the same units as the target variable, confirming the model's accuracy for predicting fish bite rates.
+
 ### Feature Importance
 
 The feature importance analysis reveals that **Temperature** is the most significant factor, with an importance score of **0.56**, indicating its dominant role in the model's predictions. Other features like **Latitude** (**0.19**), **Pressure** (**0.13**), and **Water Activity** (**0.12**) also contribute meaningfully, while **Longitude** (**0.00**) has no observable impact. These results suggest that the model is primarily driven by temperature variations, with secondary influences from location and pressure metrics.
 
 <img src="https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/media/feature_importances.png" alt="System Architecture" width="600">
-
-The small difference between training and testing MSE indicates that the model has effectively avoided overfitting, maintaining good generalization across unseen data. The RMSE values further provide an interpretable measure of error in the same units as the target variable, confirming the model's accuracy for predicting fish bite rates.
 
 ### Processing Speed
 The system achieved an average prediction speed of **15 ms** per query, enabling near-instantaneous feedback for users in real-time fishing scenarios. This rapid response ensures that anglers can make timely decisions based on current environmental conditions.
