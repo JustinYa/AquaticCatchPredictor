@@ -1,10 +1,13 @@
-# Aquatic Catch Predictor
+# Abstract
+
 AquaticCatchPredictor is a predictive system designed to enhance fishing efficiency by leveraging environmental data and machine learning. It analyzes key factors such as temperature, pressure, water activity, and geographic location to determine the best fishing spots and predict fish activity. The system integrates real-time weather data and decision tree models to provide actionable insights, helping anglers make informed decisions. Its user-centric design focuses on accuracy, usability, and adaptability to diverse aquatic environments.
 
-## Team
-1. Zixuan Yang
+# Team
 
-## Project Files
+* Zixuan Yang
+
+
+# Required Submissions  
 
 * [Website](https://justinya.github.io/AquaticCatchPredictor/)
 * [Proposal](https://github.com/JustinYa/AquaticCatchPredictor/blob/main/docs/proposal.md)
